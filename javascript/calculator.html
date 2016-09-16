@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>validateForm</title>
+
+			<style>
+
+				body {
+					background-image: url(b.jpg);
+				}
+
+				#login {
+					 	background-color:rgba(255,10,10,.2);
+					width:800px;
+					height:auto;
+					float:center;
+					box-shadow: 0 0 30px green;
+
+					 
+				}
+
+				 
+
+				#log {
+					width:220px;
+					height:30px; 
+					padding-left: 5px;
+					border:none;
+					background-color: lightgreen;
+				}
+
+				#log:hover {
+					 border:none;
+					color:white;
+					background-color: green;
+					cursor:pointer;
+				}
+
+				input[type=text],[type=password] {
+					background-color:rgba(50,50,50,.5);
+					width:220px;
+					height:25px;  
+					border-color:red;
+					padding:10px;
+					color:lightblue;
+					font-size: 16px;
+					margin:20px;
+
+				}
+
+				input:focus {
+					background-color: black;
+					color:white;
+
+				}
+
+				 
+ 				span, p {
+ 					color:white;
+ 					font-size: 50px;
+ 				}
+
+ 				button {
+ 					width:90px;
+ 					height:40px;
+ 					margin:15px;
+ 					background-color:black;
+ 					border:none;
+ 					color:white;
+ 					border-radius: 20px;
+ 					box-shadow: 0 0 20px red;
+ 				}
+
+ 				button:hover {
+ 					background-color:rgba(0,0,0, .5);
+ 					box-shadow: 0 0 20px lightblue;
+ 				}
+
+ 				#answer {
+ 					font-weight: bolder;
+ 					text-shadow: 0 0 30px green;
+ 				}
+
+
+			 
+
+			</style>
+
+			<script>
+				function validateForm() {
+					var fname = document.getElementById("fname").value;
+					var lname = document.getElementById("lname").value;
+					var uname= document.getElementById("uname").value;
+					var name = document.getElementById("name").value;
+					var password = document.getElementById("password").value;
+					var confirmpassword = document.getElementById("confirmpassword").value;
+
+					if (fname == null || fname == "") {
+						alert("INPUT YOUR FIRSTNAME...");
+
+						if (lname == null || lname == ""){
+							alert("INPUT YOUR LASTNAME...");
+
+							if (uname == null || uname == "") {
+								alert("INPUT YOUR USERNAME...");
+
+								if (name == null || name == "") {
+									alert("INPUT YOUR E-MAIL ADDRESS...");
+
+									if (password == null || password == "") {
+										alert("INPUT YOUR PASSWORD...");
+
+										if (password != confirmpassword) {
+											alert("MISMATCH PASSWORD... hahaha....");
+										}
+									}
+								}
+							}
+
+						}
+					}
+					else {
+						alert("WELCOME TO " + fname + "\nYOU'VE ABLE SUCCEFULLY LOGGED IN>>>>");
+					}
+
+				}
+				 function add() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = parseInt(x) + parseInt(y);
+				 }
+
+				 function subtract() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = parseInt(x) - parseInt(y);
+				 }
+
+				 function multiply() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = parseInt(x) * parseInt(y);
+				 }
+
+				 function divide() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = parseInt(x) / parseInt(y);
+				 }
+
+				 function printfunction() {
+				 	window.print();
+				 }
+
+				 function displayButton() {
+				 	var x = document.getElementById("calculator");
+
+				 	if (x.style.display == 'block') {
+				 		x.style.display == 'none';
+				 	}
+
+				 	else {
+				 		x.style.display == 'block';
+				 	}
+				 }
+			</script>
+		 
+
+		</head>
+
+		<body>
+		 
+			 
+			<center>
+				<div id = "login">
+					<form action = "">  <br>
+							 <input type = "text" id = "fname" placeholder= "Enter your Firstname..." >
+							 <input type = "text" id = "lname" placeholder= "Enter your Lastname" ><br><br>
+							<input type = "text" id = "uname" placeholder= "Enter Username..." > 
+							 <input type = "text" id = "name" placeholder= "Enter your E-mail Address...">
+							 <input type = "password" id = "password" placeholder= "Enter your Password..."><br>
+							 <input type = "password" id = "confirmpassword" placeholder = "Confirm your Password..."><br>
+							<input type = "SUBMIT" id = "log" onclick = "validateForm()" >
+							<button onclick = "printfunction()" id = "printthis">PRINT</button>
+							 
+				    </form>  
+				    <DIV id = "calculator">
+
+				   	<span id = "answer"></span><br>
+				  	<input type = "text" id = "firstnumber" placeholder = "Enter Firstnumber...">
+				  	<input type = "text" id = "secondnumber" placeholder = "Enter Secondnumber..."><br>
+				  	<button id = "add" onclick = "add()">ADD</button>
+				  	<button id = "subtract" onclick = "subtract()">SUBTRACT</button>
+				  	<button id = "multiply" onclick = "multiply()">MULTIPLY</button>
+				  	<button id = "dividx"   onclick = "divide()">DIVIDE</button> <br><br>
+				  	 <span id = "answer"></span><br>
+				  	 
+				  	  	
+				  </DIV>
+
+				 	
+				 </div>
+
+				 
+			</center>
+		</body>
+	</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>validateForm</title>
+
+			<style>
+
+				body {
+					background-image: url(b.jpg);
+				}
+
+				#login {
+					 	background-color:rgba(255,10,10,.2);
+					width:800px;
+					height:auto;
+					float:center;
+					box-shadow: 0 0 30px green;
+
+					 
+				}
+
+				 
+
+				#log {
+					width:220px;
+					height:30px; 
+					padding-left: 5px;
+					border:none;
+					background-color: lightgreen;
+				}
+
+				#log:hover {
+					 border:none;
+					color:white;
+					background-color: green;
+					cursor:pointer;
+				}
+
+				input[type=text],[type=password], [type = number] {
+					background-color:rgba(50,50,50,.5);
+					width:220px;
+					height:25px;  
+					border-color:red;
+					padding:10px;
+					color:lightblue;
+					font-size: 16px;
+					margin:20px;
+
+				}
+
+				input:focus {
+					background-color: black;
+					color:white;
+					box-shadow: 0 0 25px red, 0 0 25px yellow;
+				}
+
+				 
+ 				span, p {
+ 					color:white;
+ 					font-size: 50px;
+ 				}
+
+ 				button {
+ 					width:90px;
+ 					height:40px;
+ 					margin:15px;
+ 					background-color:black;
+ 					border:none;
+ 					color:white;
+ 					border-radius: 20px;
+ 					box-shadow: 0 0 20px red;
+ 				}
+
+ 				button:hover {
+ 					background-color:rgba(0,0,0, .5);
+ 					box-shadow: 0 0 20px lightblue;
+ 				}
+
+ 				#answer {
+ 					font-weight: bolder;
+ 					text-shadow: 0 0 20px lightgrey;
+
+ 				}
+
+
+			 #calculator {
+			 	background-color:rgba(50,50,50,.8);
+			 	width:300px;
+			 	height: auto;
+			 }
+
+			 #display {
+			 	background-color:rgba(0,0,0, .5);
+			 	width: 90%;
+			 	height: 50%;
+
+			 }
+
+			</style>
+
+			<script>
+			 
+				 function add() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = parseInt(x) + parseInt(y);
+				 }
+
+				 function subtract() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = x - y;
+				 }
+
+				 function multiply() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = x * y;
+				 }
+
+				 function divide() {
+				 	var x = document.getElementById("firstnumber").value;
+				 	var y = document.getElementById("secondnumber").value;
+				 	document.getElementById("answer").innerHTML = x / y;
+				 }
+
+				 function printfunction() {
+				 	window.print();
+				 }
+			</script>
+		 
+
+		</head>
+
+		<body>
+		 
+			 
+			<center><br><br>
+			  <DIV id = "calculator">
+			  		 
+			  		<br>
+			  		<div id = "display">
+			  			<span id = "answer"><br></span> 
+			  		</div>
+				   	<h1 style = "color:lightgrey; text-shadow:10px 10px 30px white;">-----ANSWER-----</h1><br>
+				  	<input type = "number" id = "firstnumber" placeholder = "Enter Firstnumber...">
+				  	<input type = "number" id = "secondnumber" placeholder = "Enter Secondnumber..."><br>
+				  	<button id = "add" onclick = "add()" >ADD</button>
+				  	<button id = "subtract" onclick = "subtract()">SUBTRACT</button>
+				  	<button id = "multiply" onclick = "multiply()">MULTIPLY</button>
+				  	<button id = "dividx"   onclick = "divide()">DIVIDE</button> <br><br>
+				  	<a href="validate.html"> <button>LOGOUT</button></a> 
+				  	 
+				  	 
+				  	  	
+				  </DIV>
+
+				 	
+				 </div>
+
+				 
+			</center>
+		</body>
+	</html>
